@@ -1,0 +1,15 @@
+  entry: {
+    SearchForm: './app/searchForm',
+    //BookingForm: './app/bookingForm',
+    Review: './app/components/Review.js',
+    AvaibookOptionalFields: './app/features/AvaibookOptionalFields',
+    GuidaGallery: './app/features/GuidaGallery',
+    Autocomplete: './app/features/Autocomplete'
+  },
+  output: {
+    path: __dirname + '/web/js/beauty/',
+    filename: '[name].js' // Template based on keys in entry above
+  },
+  plugins: [commonsPlugin,
+            new ContextReplacementPlugin(/moment[\/\\]locale$/, regExpLanguages)
+           ],

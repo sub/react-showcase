@@ -1,0 +1,18 @@
+$ ls -l app/
+total 64
+drwxr-xr-x  2 saurino users 4096 Dec  7 15:49 actions
+-rw-r--r--  1 saurino users  690 Oct 20 11:26 bookingForm.js
+drwxr-xr-x  4 saurino users 4096 Dec 13 18:10 components
+-rw-r--r--  1 saurino users  213 Oct 20 11:26 config.js
+drwxr-xr-x  2 saurino users 4096 Oct 20 11:26 constants
+drwxr-xr-x  3 saurino users 4096 Dec 13 12:54 containers
+drwxr-xr-x  2 saurino users 4096 Nov 29 15:16 css
+drwxr-xr-x  2 saurino users 4096 Nov  8 17:07 data
+drwxr-xr-x  2 saurino users 4096 Nov 29 12:30 features
+drwxr-xr-x  5 saurino users 4096 Nov 29 12:30 reducers
+drwxr-xr-x  2 saurino users 4096 Nov  8 17:07 sass
+-rw-r--r--  1 saurino users  456 Oct 20 11:26 searchForm.js
+-rw-r--r--  1 saurino users  958 Dec  7 15:49 server.js
+drwxr-xr-x  2 saurino users 4096 Oct 20 11:26 store
+drwxr-xr-x  4 saurino users 4096 Dec  7 15:49 test
+-rw-r--r--  1 saurino users 1674 Dec  7 15:49 webpack.local.config.js

@@ -1,0 +1,37 @@
+diff --git a/package.json b/package.json
+index 099b69a..06c93e7 100644
+--- a/package.json
++++ b/package.json
+@@ -1,18 +1,26 @@
+ {
+   "name": "Feries",
+-  "version": "1.0.0-0",
++  "version": "2.0.0",
+   "description": "Feries Website",
+   "private": true,
+   "main": "Gruntfile.js",
+   "scripts": {
+-    "preinstall": "npm install -g grunt-cli"
++    "eslint": "eslint --ignore-pattern app/build/ --ext .js app",
++    "locale": "NODE_ENV=locale node app/server.js --config app/webpack.local.config.js",
++    "locale-hot": "NODE_ENV=locale webpack-dev-server --progress --inline --hot --content-base app/data --config app/webpack.local.config.js",
++    "dev": "NODE_ENV=development webpack --progress --colors --watch",
++    "build": "NODE_ENV=development webpack",
++    "deploy": "NODE_ENV=production webpack --config webpack.prod.config.js",
++    "test": "NODE_ENV=test mocha app/test/.setup.js \"app/test/**/*.spec.js\" --compilers js:babel-register,js:app/test/css-modules-compiler --recursive --reporter mochawesome --reporter-options reportDir=web/reports --require ignore-styles",
++    "test:watch": "npm test -- --watch",
++    "karma": "karma start karma.conf.js"
+   },
+   "repository": {
+     "type": "git",
+     "url": "git@gitlab.rete.farm:casevacanza/web.git"
+   },
+   "application": {
+-    "bower": "bower_components",
++    "vendor": "node_modules",
+     "fonts": "web/fonts",
+     "images": "web/images",
+     "fe": {
+@@ -37,1 +45,1 @@
+     }
+   },

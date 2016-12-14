@@ -1,0 +1,20 @@
++    "mocha": "^3.1.2",
++    "mochawesome": "^1.5.3",
++    "nock": "^9.0.2",
++    "node-sass": "^3.11.0",
++    "react-addons-test-utils": "^15.3.2",
++    "react-hot-loader": "^3.0.0-beta.6",
++    "react-transform": "0.0.3",
++    "react-transform-hmr": "^1.0.4",
++    "redux-mock-store": "^1.2.1",
++    "sass-loader": "^4.0.2",
++    "sinon": "^1.17.6",
+     "time-grunt": "^1.2.1",
+-    "underscore.string": "^3.2.2"
++    "underscore.string": "^3.2.2",
++    "webpack": "^1.13.3",
++    "webpack-dev-middleware": "^1.8.4",
++    "webpack-hot-middleware": "^2.13.1"
+   },
+   "author": "Ramin Banihashemi <ramin.banihashemi@immobiliare.it>"
+ }

@@ -1,0 +1,39 @@
+import React, { PropTypes } from 'react';
+import ReactModal from 'react-modal';
+
+const Modal = ({
+  modalOpen,
+  children,
+  onCloseModal,
+  onOpenModal,
+  mode,
+}) => {
+
+  const className = (mode === 'unboxed') ? 'modal_wrap' : 'modal_wrap modal_boxed';
+
+  return (
+    <div>
+      <ReactModal
+        closeTimeoutMS={150}
+        isOpen={modalOpen}
+        overlayClassName={"modal_overlay"}
+        className={className}
+        onAfterOpen={onOpenModal}
+        onRequestClose={onCloseModal}
+      >
+        <a className={"modal_close"} onClick={onCloseModal}></a>
+        {children}
+      </ReactModal>
+    </div>
+  );
+};
+
+Modal.propTypes = {
+  modalOpen: PropTypes.bool.isRequired,
+  onOpenModal: PropTypes.func,
+  onCloseModal: PropTypes.func.isRequired,
+  mode: PropTypes.string,
+  children: PropTypes.element.isRequired,
+};
+
+export default Modal;

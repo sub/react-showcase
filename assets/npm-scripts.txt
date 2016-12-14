@@ -1,0 +1,10 @@
+"eslint": "eslint --ignore-pattern app/build/ --ext .js app",
+
+"locale": "NODE_ENV=locale node app/server.js --config app/webpack.local.config.js",
+"locale-hot": "NODE_ENV=locale webpack-dev-server --progress --inline --hot --content-base app/data --config app/webpack.local.config.js",
+"dev": "NODE_ENV=development webpack --progress --colors --watch",
+"build": "NODE_ENV=development webpack",
+"deploy": "NODE_ENV=production webpack --config webpack.prod.config.js",
+"test": "NODE_ENV=test mocha app/test/.setup.js \"app/test/**/*.spec.js\" --compilers js:babel-register,js:app/test/css-modules-compiler --recursive --reporter mochawesome --reporter-options reportDir=web/reports --require ignore-styles",
+"test:watch": "npm test -- --watch",
+"karma": "karma start karma.conf.js"
